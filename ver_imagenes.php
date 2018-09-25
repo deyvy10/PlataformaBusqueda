@@ -10,11 +10,11 @@
              <?php 
 
              	include 'conexion_mysql.php';
-             	$sql=$mysqli->query("SELECT imagen_nombre FROM imagen where nombre='Raraware'");
+             	$sql=$mysqli->query("SELECT empresa_codigo,imagenes_nombre FROM tbl_empresaimagenes where empresa_codigo=1");
 
              	while ($row= $sql->fetch_array(MYSQLI_ASSOC)) {
              	
-             			$img="<div id='imagen'><img src='". $row['imagen_nombre'] ."' width='200px' height='200px'/></div>";
+             			$img="<div id='imagen'><img src='". $row['imagenes_nombre'] ."' width='200px' height='200px'/></div>";
              			echo $img;
 
              	}
